@@ -15,7 +15,7 @@ headers = {
 def get_data():
     r = requests.get(url, headers=headers)
     objects = r.text
-    file_path = r'C:\Users\sidhu\Desktop\Final Project\Sem-6-Project-main\demofile3.js'
+    file_path = r'C:\Users\sidhu\Desktop\Final Project\Sem-6-Project\static\demofile3.js'
     with open(file_path, 'w') as output_file:
         print('''objects = {0}
             console.log(objects['chart']['result'][0]['meta']['regularMarketPrice'])
