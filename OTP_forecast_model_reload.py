@@ -52,18 +52,18 @@ test_set_scaled = sc.fit_transform(test_set)
 # Predicting Closing Price
 # Generate windowed timestamp data
 # this function will combine data of 20 days (we can change it using time_window parameter)
-time_window = 60      # 60 days
+time_window = 28      # 60 days
 days_step =1         # skip 1 days in between, can be set to 1 day
 
 # later...
 
 # load json and create model
-json_file = open('model.json', 'r')
+json_file = open('model_5_28.json', 'r')
 loaded_model_json = json_file.read()
 json_file.close()
 loaded_model = model_from_json(loaded_model_json)
 # load weights into new model
-loaded_model.load_weights("model.h5")
+loaded_model.load_weights("model_5_28.h5")
 print("Loaded model from disk")
 
 
